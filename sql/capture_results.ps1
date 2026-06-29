@@ -117,7 +117,7 @@ Get-ChildItem $joinSubDir -Filter "*.sql" | Sort-Object Name | ForEach-Object {
     docker cp "codyssey-mysql:${containerOut}" $localTmp | Out-Null
     $body = [System.IO.File]::ReadAllText($localTmp, [System.Text.Encoding]::UTF8)
 
-    $combinedJoinSub += "--- 결과 ($desc) ---`r`n`r`n" + $body + "`r`n"
+    $combinedJoinSub += "--- " + $desc + " ---`r`n`r`n" + $body + "`r`n"
 }
 
 [System.IO.File]::WriteAllText((Join-Path $resultsDir "bonus_join_vs_subquery.txt"), $combinedJoinSub, $utf8Bom)
