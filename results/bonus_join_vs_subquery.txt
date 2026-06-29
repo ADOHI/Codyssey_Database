@@ -1,0 +1,51 @@
+﻿============================================================
+bonus_join_vs_subquery.txt
+[보너스] JOIN vs 서브쿼리 - 평균 수강 건수 이상인 강의
+============================================================
+
+[요구사항]
+강의별 수강 신청 건수가 "전체 강의 평균 수강 건수" 이상인 강의 목록을 구한다.
+
+[방식 1] INNER JOIN + GROUP BY + HAVING
+- course와 enrollment를 JOIN한 뒤 강의별 COUNT 집계
+- HAVING으로 평균 이상만 필터
+
+[방식 2] 상관 서브쿼리 + HAVING
+- course 각 행마다 (SELECT COUNT(*) FROM enrollment WHERE course_id = c.id) 로 건수 계산
+- HAVING으로 평균 이상만 필터
+
+[비교]
+- 결과: 두 쿼리 모두 동일한 강의 목록을 반환해야 한다.
+- 가독성: JOIN 방식이 "관계 + 집계" 흐름이 한눈에 들어오기 쉽다.
+- 성능: 데이터가 많아지면 JOIN + GROUP BY 한 번이 유리한 경우가 많다.
+          상관 서브쿼리는 강의마다 COUNT를 반복 계산할 수 있다.
+- 선택: "여러 테이블 컬럼을 함께 출력"할 때 JOIN, "존재/개수만 확인"할 때 서브쿼리도 자주 쓴다.
+
+--- 寃곌낵 ([방식 1] INNER JOIN + GROUP BY + HAVING) ---
+
+mysql: [Warning] Using a password on the command line interface can be insecure.
++---------------------------------------+-----+
+| title                                 | cnt |
++---------------------------------------+-----+
+| Spring Boot REST API 마스터           |   2 |
+| React로 Todo 앱 만들기                |   2 |
+| Docker와 Kubernetes 입문              |   2 |
+| SQL과 데이터 모델링 기초              |   3 |
+| MySQL 실무 쿼리 200선                 |   2 |
+| ChatGPT API로 AI 서비스 만들기        |   2 |
++---------------------------------------+-----+
+
+--- 寃곌낵 ([방식 2] 상관 서브쿼리 + HAVING) ---
+
+mysql: [Warning] Using a password on the command line interface can be insecure.
++---------------------------------------+------+
+| title                                 | cnt  |
++---------------------------------------+------+
+| Spring Boot REST API 마스터           |    2 |
+| React로 Todo 앱 만들기                |    2 |
+| Docker와 Kubernetes 입문              |    2 |
+| SQL과 데이터 모델링 기초              |    3 |
+| MySQL 실무 쿼리 200선                 |    2 |
+| ChatGPT API로 AI 서비스 만들기        |    2 |
++---------------------------------------+------+
+

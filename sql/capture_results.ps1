@@ -94,4 +94,33 @@ $fkBody = [System.IO.File]::ReadAllText((Join-Path $env:TEMP "codyssey_fk_error.
 [System.IO.File]::WriteAllText((Join-Path $resultsDir "bonus_fk_error.txt"), $fkHeader + $fkBody, $utf8Bom)
 Write-Host "Saved bonus_fk_error.txt"
 
+# Bonus: JOIN vs subquery comparison
+$joinSubDescFile = Join-Path $PSScriptRoot "bonus_join_subquery_descriptions.txt"
+$joinSubDescriptions = @{}
+Get-Content $joinSubDescFile -Encoding UTF8 | ForEach-Object {
+    $parts = $_ -split '\|', 2
+    if ($parts.Count -eq 2) { $joinSubDescriptions[$parts[0]] = $parts[1] }
+}
+
+$combinedJoinSub = [System.IO.File]::ReadAllText((Join-Path $PSScriptRoot "bonus_join_subquery_header.txt"), [System.Text.Encoding]::UTF8)
+
+$joinSubDir = Join-Path $PSScriptRoot "bonus_join_subquery"
+Get-ChildItem $joinSubDir -Filter "*.sql" | Sort-Object Name | ForEach-Object {
+    $num = $_.BaseName.Substring(0, 2)
+    $containerSql = "/tmp/codyssey-sql/bonus_join_subquery/$($_.Name)"
+    $containerOut = "/tmp/bonus_join_sub_$num.txt"
+    $desc = $joinSubDescriptions[$num]
+    if (-not $desc) { $desc = $_.Name }
+
+    docker exec codyssey-mysql sh -c "mysql -uroot -prootpassword --default-character-set=utf8mb4 -t codyssey < '$containerSql' > '$containerOut' 2>&1"
+    $localTmp = Join-Path $env:TEMP "bonus_join_sub_$num.txt"
+    docker cp "codyssey-mysql:${containerOut}" $localTmp | Out-Null
+    $body = [System.IO.File]::ReadAllText($localTmp, [System.Text.Encoding]::UTF8)
+
+    $combinedJoinSub += "--- 결과 ($desc) ---`r`n`r`n" + $body + "`r`n"
+}
+
+[System.IO.File]::WriteAllText((Join-Path $resultsDir "bonus_join_vs_subquery.txt"), $combinedJoinSub, $utf8Bom)
+Write-Host "Saved bonus_join_vs_subquery.txt"
+
 Write-Host "Done: $resultsDir"

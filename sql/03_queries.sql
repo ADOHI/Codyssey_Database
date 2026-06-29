@@ -217,7 +217,7 @@ HAVING COUNT(e.id) >= (
     ) AS sub
 );
 
--- 서브쿼리 IN 방식 (동일 요구)
+-- 상관 서브쿼리 방식 (동일 요구)
 SELECT title, (
     SELECT COUNT(*)
     FROM enrollment e

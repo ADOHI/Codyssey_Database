@@ -1,0 +1,2 @@
+01|[방식 1] INNER JOIN + GROUP BY + HAVING
+02|[방식 2] 상관 서브쿼리 + HAVING
