@@ -1,0 +1,10 @@
+﻿============================================================
+query_14.txt
+[UPDATE] 진도율 100% ACTIVE 수강을 COMPLETED로 변경
+============================================================
+mysql: [Warning] Using a password on the command line interface can be insecure.
++---------------+
+| affected_rows |
++---------------+
+|             1 |
++---------------+

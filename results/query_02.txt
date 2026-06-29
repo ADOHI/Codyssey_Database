@@ -1,0 +1,19 @@
+﻿============================================================
+query_02.txt
+[기본 조회] 5만원 이상 강의 가격 내림차순 (WHERE + ORDER BY)
+============================================================
+mysql: [Warning] Using a password on the command line interface can be insecure.
++----+---------------------------------------+--------------+-----------+--------------+
+| id | title                                 | instructor   | price     | level        |
++----+---------------------------------------+--------------+-----------+--------------+
+| 12 | AWS EC2와 RDS 배포 실습               | 배클라       | 109000.00 | INTERMEDIATE |
+|  5 | Docker와 Kubernetes 입문              | 정데브옵     |  99000.00 | INTERMEDIATE |
+| 11 | ChatGPT API로 AI 서비스 만들기        | 임AI         |  99000.00 | INTERMEDIATE |
+|  1 | Spring Boot REST API 마스터           | 김백엔       |  89000.00 | INTERMEDIATE |
+| 10 | Unity 2D 게임 제작                    | 오게임       |  89000.00 | BEGINNER     |
+|  2 | JPA와 Hibernate 실전                  | 이영속       |  79000.00 | ADVANCED     |
+|  9 | 웹 보안 OWASP Top 10                  | 신시큐       |  79000.00 | ADVANCED     |
+|  6 | Flutter 크로스플랫폼 앱               | 한모바       |  69000.00 | INTERMEDIATE |
+|  3 | React로 Todo 앱 만들기                | 박프론       |  59000.00 | BEGINNER     |
+|  8 | MySQL 실무 쿼리 200선                 | 강쿼리       |  59000.00 | INTERMEDIATE |
++----+---------------------------------------+--------------+-----------+--------------+

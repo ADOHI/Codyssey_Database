@@ -1,0 +1,8 @@
+============================================================
+bonus_fk_error.txt
+[보너스] FK 제약 위반 테스트 - 존재하지 않는 member_id(9999) 참조 시도
+============================================================
+
+INSERT INTO enrollment (member_id, course_id, enrolled_at, progress_pct, status)
+VALUES (9999, 1, NOW(), 0, 'ACTIVE');
+

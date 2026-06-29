@@ -1,0 +1,23 @@
+﻿============================================================
+query_06.txt
+[INNER JOIN] 강의 + 카테고리명
+============================================================
+mysql: [Warning] Using a password on the command line interface can be insecure.
++----+---------------+----------------------------------------+--------------+-----------+--------------+
+| id | category_name | title                                  | instructor   | price     | level        |
++----+---------------+----------------------------------------+--------------+-----------+--------------+
+| 11 | AI            | ChatGPT API로 AI 서비스 만들기         | 임AI         |  99000.00 | INTERMEDIATE |
+|  2 | Backend       | JPA와 Hibernate 실전                   | 이영속       |  79000.00 | ADVANCED     |
+|  1 | Backend       | Spring Boot REST API 마스터            | 김백엔       |  89000.00 | INTERMEDIATE |
+| 13 | Career        | 개발자 포트폴리오 완성하기             | 김커리       |  29000.00 | BEGINNER     |
+| 12 | Cloud         | AWS EC2와 RDS 배포 실습                | 배클라       | 109000.00 | INTERMEDIATE |
+|  8 | Data          | MySQL 실무 쿼리 200선                  | 강쿼리       |  59000.00 | INTERMEDIATE |
+|  7 | Data          | SQL과 데이터 모델링 기초               | 윤데이터     |  39000.00 | BEGINNER     |
+|  5 | DevOps        | Docker와 Kubernetes 입문               | 정데브옵     |  99000.00 | INTERMEDIATE |
+|  3 | Frontend      | React로 Todo 앱 만들기                 | 박프론       |  59000.00 | BEGINNER     |
+|  4 | Frontend      | TypeScript 핵심 문법                   | 최타입       |  49000.00 | BEGINNER     |
+| 10 | Game          | Unity 2D 게임 제작                     | 오게임       |  89000.00 | BEGINNER     |
+|  6 | Mobile        | Flutter 크로스플랫폼 앱                | 한모바       |  69000.00 | INTERMEDIATE |
+| 14 | OpenSource    | 오픈소스 첫 기여 가이드                | 이깃         |      0.00 | BEGINNER     |
+|  9 | Security      | 웹 보안 OWASP Top 10                   | 신시큐       |  79000.00 | ADVANCED     |
++----+---------------+----------------------------------------+--------------+-----------+--------------+

@@ -1,0 +1,21 @@
+﻿============================================================
+bonus_metrics_01.txt
+[보너스 지표 1] 카테고리별 수강 신청 건수 (인기 카테고리)
+============================================================
+mysql: [Warning] Using a password on the command line interface can be insecure.
++---------------+------------------+
+| category_name | enrollment_count |
++---------------+------------------+
+| Data          |                5 |
+| Frontend      |                3 |
+| AI            |                2 |
+| Backend       |                2 |
+| DevOps        |                2 |
+| Career        |                1 |
+| Cloud         |                1 |
+| Mobile        |                1 |
+| Security      |                1 |
+| Design        |                0 |
+| Game          |                0 |
+| OpenSource    |                0 |
++---------------+------------------+

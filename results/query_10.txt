@@ -1,0 +1,19 @@
+﻿============================================================
+query_10.txt
+[집계] 강의별 수강 신청 건수 TOP 10 (COUNT + GROUP BY)
+============================================================
+mysql: [Warning] Using a password on the command line interface can be insecure.
++---------------------------------------+-------------------+
+| title                                 | total_enrollments |
++---------------------------------------+-------------------+
+| SQL과 데이터 모델링 기초              |                 3 |
+| Spring Boot REST API 마스터           |                 2 |
+| React로 Todo 앱 만들기                |                 2 |
+| Docker와 Kubernetes 입문              |                 2 |
+| MySQL 실무 쿼리 200선                 |                 2 |
+| ChatGPT API로 AI 서비스 만들기        |                 2 |
+| TypeScript 핵심 문법                  |                 1 |
+| Flutter 크로스플랫폼 앱               |                 1 |
+| 웹 보안 OWASP Top 10                  |                 1 |
+| AWS EC2와 RDS 배포 실습               |                 1 |
++---------------------------------------+-------------------+

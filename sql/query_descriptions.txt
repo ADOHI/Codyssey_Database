@@ -1,0 +1,16 @@
+01|[기본 조회] PRO 등급 회원 목록 (WHERE)
+02|[기본 조회] 5만원 이상 강의 가격 내림차순 (WHERE + ORDER BY)
+03|[기본 조회] 최근 출간 강의 TOP 5 (ORDER BY + LIMIT)
+04|[기본 조회] ACTIVE 수강 중 진도율 50% 미만
+05|[INNER JOIN] 수강 + 회원 닉네임 + 강의 제목
+06|[INNER JOIN] 강의 + 카테고리명
+07|[INNER JOIN] COMPLETED 수강 + 회원 이메일 + 강의 가격
+08|[LEFT JOIN] 모든 회원 + 수강 건수 (0건 포함)
+09|[LEFT JOIN] 모든 강의 + 수강 건수 (0건 포함)
+10|[집계] 강의별 수강 신청 건수 TOP 10 (COUNT + GROUP BY)
+11|[집계] 카테고리별 평균 진도율 (AVG + GROUP BY)
+12|[집계] 회원 등급별 수강 강의 가격 합계 (SUM + GROUP BY)
+13|[서브쿼리] 한 번도 수강 신청하지 않은 회원
+14|[UPDATE] 진도율 100% ACTIVE 수강을 COMPLETED로 변경
+15|[DELETE] CANCELLED 상태 수강 기록 삭제
+16|[INDEX] enrolled_at 인덱스 생성 및 확인

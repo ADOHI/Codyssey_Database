@@ -1,0 +1,21 @@
+﻿============================================================
+query_08.txt
+[LEFT JOIN] 모든 회원 + 수강 건수 (0건 포함)
+============================================================
+mysql: [Warning] Using a password on the command line interface can be insecure.
++----+-------------+------------+------------------+
+| id | nickname    | tier       | enrollment_count |
++----+-------------+------------+------------------+
+| 12 | bae_guest   | FREE       |                0 |
+|  4 | choi_java   | FREE       |                1 |
+| 10 | oh_security | ENTERPRISE |                1 |
+|  9 | shin_mobile | FREE       |                1 |
+|  7 | yoon_newbie | FREE       |                1 |
+|  6 | han_data    | PRO        |                2 |
+|  5 | jung_react  | ENTERPRISE |                2 |
+|  8 | kang_ops    | PRO        |                2 |
+|  1 | kim_dev     | PRO        |                2 |
+|  2 | lee_coder   | FREE       |                2 |
+| 11 | lim_ai      | PRO        |                2 |
+|  3 | park_sql    | PRO        |                2 |
++----+-------------+------------+------------------+

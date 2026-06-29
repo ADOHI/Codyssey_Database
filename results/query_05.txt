@@ -1,0 +1,27 @@
+﻿============================================================
+query_05.txt
+[INNER JOIN] 수강 + 회원 닉네임 + 강의 제목
+============================================================
+mysql: [Warning] Using a password on the command line interface can be insecure.
++---------------+-------------+----------------------------------------+--------------+-----------+---------------------+
+| enrollment_id | nickname    | course_title                           | progress_pct | status    | enrolled_at         |
++---------------+-------------+----------------------------------------+--------------+-----------+---------------------+
+|            18 | lim_ai      | 개발자 포트폴리오 완성하기             |          100 | COMPLETED | 2024-12-10 13:30:00 |
+|            17 | lim_ai      | ChatGPT API로 AI 서비스 만들기         |           50 | ACTIVE    | 2024-11-01 09:00:00 |
+|            16 | oh_security | ChatGPT API로 AI 서비스 만들기         |           75 | ACTIVE    | 2024-10-05 14:00:00 |
+|            15 | shin_mobile | 웹 보안 OWASP Top 10                   |          100 | COMPLETED | 2024-09-10 10:00:00 |
+|            14 | kang_ops    | Flutter 크로스플랫폼 앱                |           20 | CANCELLED | 2024-09-01 17:00:00 |
+|            13 | kang_ops    | Docker와 Kubernetes 입문               |           45 | ACTIVE    | 2024-08-15 08:30:00 |
+|            12 | yoon_newbie | React로 Todo 앱 만들기                 |           15 | ACTIVE    | 2024-08-01 12:00:00 |
+|            11 | han_data    | MySQL 실무 쿼리 200선                  |           90 | ACTIVE    | 2024-07-20 11:00:00 |
+|            10 | han_data    | SQL과 데이터 모델링 기초               |          100 | ACTIVE    | 2024-07-05 09:00:00 |
+|             9 | jung_react  | AWS EC2와 RDS 배포 실습                |           55 | ACTIVE    | 2024-06-20 15:30:00 |
+|             8 | jung_react  | Docker와 Kubernetes 입문               |          100 | COMPLETED | 2024-06-01 10:00:00 |
+|             7 | choi_java   | Spring Boot REST API 마스터            |           30 | ACTIVE    | 2024-05-05 13:00:00 |
+|             6 | park_sql    | MySQL 실무 쿼리 200선                  |           70 | ACTIVE    | 2024-05-01 16:00:00 |
+|             5 | park_sql    | SQL과 데이터 모델링 기초               |          100 | COMPLETED | 2024-04-10 09:30:00 |
+|             4 | lee_coder   | TypeScript 핵심 문법                   |           40 | ACTIVE    | 2024-04-01 11:00:00 |
+|             3 | lee_coder   | React로 Todo 앱 만들기                 |           60 | ACTIVE    | 2024-03-20 14:00:00 |
+|             2 | kim_dev     | SQL과 데이터 모델링 기초               |           85 | ACTIVE    | 2024-03-15 10:30:00 |
+|             1 | kim_dev     | Spring Boot REST API 마스터            |          100 | COMPLETED | 2024-03-01 09:00:00 |
++---------------+-------------+----------------------------------------+--------------+-----------+---------------------+

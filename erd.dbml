@@ -1,0 +1,41 @@
+// Codyssey ERD - dbdiagram.io 에 붙여넣기
+// https://dbdiagram.io
+
+Table category {
+  id int [pk, increment]
+  name varchar(50) [not null, unique]
+  description varchar(255)
+  created_at datetime [not null, default: `CURRENT_TIMESTAMP`]
+}
+
+Table member {
+  id int [pk, increment]
+  email varchar(100) [not null, unique]
+  nickname varchar(50) [not null]
+  tier varchar(20) [not null, default: 'FREE']
+  joined_at date [not null]
+}
+
+Table course {
+  id int [pk, increment]
+  category_id int [not null, ref: > category.id]
+  title varchar(200) [not null]
+  instructor varchar(100) [not null]
+  price decimal(10,2) [not null, default: 0]
+  level varchar(20) [not null]
+  published_at date
+}
+
+Table enrollment {
+  id int [pk, increment]
+  member_id int [not null, ref: > member.id]
+  course_id int [not null, ref: > course.id]
+  enrolled_at datetime [not null]
+  progress_pct tinyint [not null, default: 0]
+  status varchar(20) [not null, default: 'ACTIVE']
+
+  indexes {
+    (member_id, course_id) [unique]
+    enrolled_at
+  }
+}

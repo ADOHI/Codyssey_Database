@@ -1,0 +1,14 @@
+﻿============================================================
+query_01.txt
+[기본 조회] PRO 등급 회원 목록 (WHERE)
+============================================================
+mysql: [Warning] Using a password on the command line interface can be insecure.
++----+------------------+----------+------+------------+
+| id | email            | nickname | tier | joined_at  |
++----+------------------+----------+------+------------+
+|  1 | kim@example.com  | kim_dev  | PRO  | 2024-01-15 |
+|  3 | park@example.com | park_sql | PRO  | 2024-03-10 |
+|  6 | han@example.com  | han_data | PRO  | 2024-06-22 |
+|  8 | kang@example.com | kang_ops | PRO  | 2024-08-14 |
+| 11 | lim@example.com  | lim_ai   | PRO  | 2024-11-11 |
++----+------------------+----------+------+------------+

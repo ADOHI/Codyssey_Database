@@ -1,0 +1,10 @@
+﻿============================================================
+query_15.txt
+[DELETE] CANCELLED 상태 수강 기록 삭제
+============================================================
+mysql: [Warning] Using a password on the command line interface can be insecure.
++--------------+
+| deleted_rows |
++--------------+
+|            1 |
++--------------+
