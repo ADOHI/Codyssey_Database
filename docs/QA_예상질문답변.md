@@ -351,7 +351,7 @@ WHERE id NOT IN (
 - **WHERE**에 자주 쓰이는 컬럼 (`enrolled_at`, `member_id`)
 - **JOIN** 키 (FK 컬럼 — InnoDB는 FK에 자동 인덱스 생성)
 - **ORDER BY**에 자주 쓰이는 컬럼
-- **카�.cardinality(고유값)** 가 높은 컬럼
+- **카디널리티(cardinality, 고유값 수)** 가 높은 컬럼
 
 본 프로젝트: `CREATE INDEX idx_enrollment_enrolled_at ON enrollment (enrolled_at)`  
 → "최근 N일 수강", 기간별 추이 조회에 유리.

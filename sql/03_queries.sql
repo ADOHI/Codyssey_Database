@@ -119,6 +119,18 @@ LEFT JOIN enrollment e ON c.id = e.course_id
 GROUP BY c.id, c.title, cat.name
 ORDER BY enrollment_count DESC, c.title;
 
+SELECT
+    c.id,
+    c.title,
+    cat.name AS category_name,
+    COUNT(e.id) AS enrollment_count
+FROM course c
+INNER JOIN category cat ON c.category_id = cat.id
+INNER JOIN enrollment e ON c.id = e.course_id
+GROUP BY c.id, c.title, cat.name
+ORDER BY enrollment_count DESC, c.title;
+
+
 -- ============================================================
 -- [집계 1] 강의별 수강 신청 건수 (COUNT + GROUP BY)
 -- 확인: 가장 인기 있는 강의 TOP 10
